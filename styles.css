@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+}
+:root{
+    --white:hsl(0,0%,100%);
+    --lgray:hsl(212, 45%, 89%);
+    --gblue:hsl(220, 15%, 55%);
+    --darkblue:hsl(218, 44%, 22%);
+}
+
+body{
+    background: var(--lgray);
+    font-family: outfit;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap:4rem;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    width: clamp(20rem, calc(20rem + 1vw), 22rem);
+
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1em;   
+}
+img:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+
+    cursor: pointer;
+}
+.card__img{
+    padding: 1rem;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+h2{
+    text-align: center;
+    padding-bottom: 1rem;
+    color: var(--darkblue);
+    
+}
+.card__content p{
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--gblue);
+}
+
+.card__footer{
+    display: flex;
+    justify-content: center;
+}
+
+.card__footer p{
+    font-size: 0.65rem;
+    padding-bottom: 0.5rem;
+    color: var(--gblue);
+}
+.card__footer a{
+    color: var(--darkblue);
+}
+.card__footer a:hover{
+    color: var(--lgray);
+    
+}
+/*desktop*/
+@media screen and (max-width:1440px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+        width: 100%;
+    }
+   
+}
+/*mobile*/
+@media screen and (max-width:375px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        width: clamp(17rem, calc(15rem + 1vw), 17rem);
+    
+    }
+    h2{
+        font-size: 1.20rem;
+    }
+    .card__content p{
+        font-size: 0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .card__footer p{
+        font-size: 0.5rem;
+    }
+
+    
+}
